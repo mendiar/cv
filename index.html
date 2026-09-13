@@ -618,11 +618,19 @@ footer{padding:1.1rem 1.5rem!important}
 
 <style>
 /* Professional hierarchy over legacy cyberpunk effects */
+:root { --purple-deep: #580f8b; --purple-bright: #7b20b5; --purple-glow: rgba(88,15,139,.42); }
 .hero-bio { max-width: 620px; }
 .intj-badge { border-color: rgba(212,160,23,.35) !important; }
 .professional-evidence { margin-top: 1.5rem; padding: .85rem 1rem; border-left: 2px solid var(--gold); background: rgba(8,13,26,.72); font-family: 'Share Tech Mono', monospace; font-size: .68rem; line-height: 1.6; color: rgba(221,213,192,.68); }
 .mbti-bars { display: none !important; }
 .forge-tab.active { border-bottom-color: var(--gold) !important; }
+.tag-p { color: #c98cff !important; border-color: rgba(123,32,181,.65) !important; background: rgba(88,15,139,.2) !important; }
+.omega-role { border-left: 2px solid var(--purple-bright) !important; box-shadow: inset 12px 0 24px rgba(88,15,139,.055); }
+.omega-role .tl-node { background: var(--purple-bright) !important; box-shadow: 0 0 10px var(--purple-glow) !important; }
+.omega-role .tl-date, .omega-role .tl-company { color: #c98cff !important; }
+.omega-role:hover { border-color: rgba(123,32,181,.7) !important; box-shadow: 0 0 20px rgba(88,15,139,.16) !important; }
+.wiki-card:nth-child(3n) { border-top-color: rgba(123,32,181,.62) !important; }
+.wiki-card:nth-child(3n) .wiki-cat, .wiki-card:nth-child(3n) .wiki-axiom { color: #c98cff !important; }
 .wiki-cat, .sec-tag, .hero-eyebrow { letter-spacing: .18em; }
 </style>
 </head>
@@ -766,7 +774,18 @@ footer{padding:1.1rem 1.5rem!important}
     <div class="forge-panel active" id="panel-logs">
       <div class="svc-note" data-en="▸ Full deployment record — 2011 to present. Every node operational." data-es="▸ Registro completo de despliegue — 2011 al presente. Cada nodo operacional.">▸ Full deployment record — 2011 to present. Every node operational.</div>
       <div class="timeline">
-
+        <!-- 0 -->
+        <div class="tl-item reveal omega-role">
+          <div class="tl-node"></div>
+          <div class="tl-date">Apr 2026 — Present</div>
+          <div class="tl-title">Bilingual Patient Access Specialist</div>
+          <div class="tl-company">BPO Omega Healthcare · NYU Langone Health — New York &amp; Florida</div>
+          <div class="tl-tags"><span class="tag tag-p">Healthcare</span><span class="tag tag-p">Epic</span><span class="tag tag-p">Salesforce CRM</span><span class="tag tag-r">Patient Access</span><span class="tag tag-b">Bilingual EN/ES</span></div>
+          <ul class="tl-bullets">
+            <li data-en="Schedule, reschedule, and cancel medical appointments for NYU Langone Health patients across New York and Florida, using Epic and Salesforce CRM workflows." data-es="Agendo, reagendo y cancelo citas médicas para pacientes de NYU Langone Health en Nueva York y Florida, utilizando flujos de trabajo en Epic y Salesforce CRM.">Schedule, reschedule, and cancel medical appointments for NYU Langone Health patients across New York and Florida, using Epic and Salesforce CRM workflows.</li>
+            <li data-en="Apply healthcare customer-service, patient-access, documentation, and compliance practices developed through prior Cigna Healthcare operations with Concentrix." data-es="Aplico conocimientos de servicio en salud, acceso de pacientes, documentación y cumplimiento desarrollados previamente en las operaciones de Cigna Healthcare con Concentrix.">Apply healthcare customer-service, patient-access, documentation, and compliance practices developed through prior Cigna Healthcare operations with Concentrix.</li>
+          </ul>
+        </div>
         <!-- 1 -->
         <div class="tl-item reveal">
           <div class="tl-node"></div>
