@@ -11,7 +11,7 @@ const Footer = () => (
     <ScrollRevealWrapper className="container mx-auto px-4 max-w-4xl">
       <h2 className="font-serif text-2xl text-bone mb-2 text-center">Contact</h2>
       <p className="font-mono text-[10px] tracking-[0.2em] uppercase neon-text-cyan mb-4 text-center">
-        Communication Nexus
+        Open a professional conversation
       </p>
 
       <div className="flex flex-col sm:flex-row items-center justify-center gap-8 mb-12">
@@ -33,7 +33,7 @@ const Footer = () => (
           © {new Date().getFullYear()} Diego Armando Méndez — Diakos Logic &amp; DevMind
         </p>
         <p className="font-mono text-[8px] tracking-[0.1em] uppercase text-bone-dim/40 mt-1">
-          Built with precision. Powered by vision.
+          Built with precision · designed for continuity · ready for the next system
         </p>
       </div>
     </ScrollRevealWrapper>

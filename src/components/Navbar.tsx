@@ -2,11 +2,11 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { label: "Home", href: "#home" },
-  { label: "The Architect", href: "#architect" },
-  { label: "The Forge", href: "#forge" },
-  { label: "The Nexus", href: "#nexus" },
-  { label: "The Atheneum", href: "#atheneum" },
+  { label: "Profile", href: "#home" },
+  { label: "Principles", href: "#architect" },
+  { label: "Experience", href: "#forge" },
+  { label: "Systems", href: "#systems" },
+  { label: "Knowledge", href: "#atheneum" },
   { label: "Contact", href: "#contact" },
 ];
 
