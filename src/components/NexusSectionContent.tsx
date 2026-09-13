@@ -209,7 +209,7 @@ const NexusSectionContent = () => {
           <div className="w-2 h-2 rounded-full bg-destructive" />
           <div className="w-2 h-2 rounded-full bg-primary" />
           <div className="w-2 h-2 rounded-full bg-accent" />
-          <span className="font-mono text-[10px] text-bone-dim ml-2">nexus_search.terminal</span>
+          <span className="font-mono text-[10px] text-bone-dim ml-2">projects_and_research.search</span>
         </div>
         <div className="flex items-center gap-3 px-4 py-2.5">
           <span className="neon-text-cyan font-mono text-sm">▸</span>
@@ -217,7 +217,7 @@ const NexusSectionContent = () => {
           <input
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            placeholder="query nexus archives..."
+            placeholder="search projects, systems, and research..."
             className="flex-1 bg-transparent font-mono text-xs text-bone placeholder:text-bone-dim/40 focus:outline-none"
           />
         </div>
@@ -225,27 +225,27 @@ const NexusSectionContent = () => {
 
       {/* Infrastructure Node */}
       <div className="glass-card rounded-sm p-3 mb-4 border border-accent/20 bg-accent/[0.03]">
-        <h4 className="font-mono text-[9px] sm:text-[10px] tracking-[0.15em] sm:tracking-[0.2em] uppercase neon-text-cyan mb-2 border-b-2 border-[hsl(var(--scarlet-bright))] pb-1 inline-block break-words">[ INFRASTRUCTURE NODE ]</h4>
+        <h4 className="font-mono text-[9px] sm:text-[10px] tracking-[0.15em] sm:tracking-[0.2em] uppercase neon-text-cyan mb-2 border-b-2 border-[hsl(var(--scarlet-bright))] pb-1 inline-block break-words">[ CURRENT TOOLING ]</h4>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full heartbeat-scarlet shrink-0" />
             <div>
               <p className="font-mono text-[9px] text-bone-dim uppercase tracking-wider">Dev Environment</p>
-              <p className="font-mono text-[10px] text-bone leading-tight">Google Project IDX / AI Studio</p>
+              <p className="font-mono text-[10px] text-bone leading-tight">React / Vite / TypeScript</p>
             </div>
           </div>
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full heartbeat-scarlet shrink-0" style={{ animationDelay: '0.3s' }} />
             <div>
               <p className="font-mono text-[9px] text-bone-dim uppercase tracking-wider">Deployment</p>
-              <p className="font-mono text-[10px] text-bone leading-tight">Firebase Global Edge Network</p>
+              <p className="font-mono text-[10px] text-bone leading-tight">GitHub Pages / Static delivery</p>
             </div>
           </div>
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full heartbeat-scarlet shrink-0" style={{ animationDelay: '0.6s' }} />
             <div>
               <p className="font-mono text-[9px] text-bone-dim uppercase tracking-wider">Intelligence Layer</p>
-              <p className="font-mono text-[10px] text-bone leading-tight">Gemini 1.5 Pro / Ultra Orchestration</p>
+              <p className="font-mono text-[10px] text-bone leading-tight">LLM-assisted workflows</p>
             </div>
           </div>
         </div>
@@ -256,7 +256,7 @@ const NexusSectionContent = () => {
           <div>
             <h3 className="font-serif text-base text-bone mb-1 flex items-center gap-2">
               <Cpu size={14} className="neon-text-cyan icon-heated" />
-              Digital Alchemy
+              Projects &amp; Automation
             </h3>
             <p className="font-mono text-[9px] tracking-[0.2em] uppercase text-bone-dim mb-3">Technical Projects</p>
             <DigitalAlchemy />
@@ -265,7 +265,7 @@ const NexusSectionContent = () => {
           <div>
             <h3 className="font-serif text-base text-bone mb-1 flex items-center gap-2">
               <Users size={14} className="neon-text-gold icon-heated" />
-              Civitas & Leadership
+              Community &amp; Governance
             </h3>
             <p className="font-mono text-[9px] tracking-[0.2em] uppercase text-bone-dim mb-3">Social Impact</p>
             <CivitasSection />
@@ -275,7 +275,7 @@ const NexusSectionContent = () => {
         <div>
           <h3 className="font-serif text-base text-bone mb-1 flex items-center gap-2">
             <BookOpen size={14} className="neon-text-cyan icon-heated" />
-            The Atheneum
+              Research Archive
           </h3>
           <p className="font-mono text-[9px] tracking-[0.2em] uppercase text-bone-dim mb-3">Document Archive</p>
           <AtheneumArchive />

@@ -107,7 +107,7 @@ const DigitalMeter = ({ level, color, name }: { level: number; color: "gold" | "
   const segments = 20;
   const filledSegments = Math.round((level / 100) * segments);
   const isGold = color === "gold";
-  const tierLabel = level >= 90 ? "EXPERT" : level >= 80 ? "ADVANCED" : "DEVELOPING";
+  const tierLabel = level >= 90 ? "EXPERT PRACTICE" : level >= 80 ? "ADVANCED PRACTICE" : "APPLIED EXPERIENCE";
 
   return (
     <div className="group">
@@ -118,9 +118,6 @@ const DigitalMeter = ({ level, color, name }: { level: number; color: "gold" | "
             level >= 90 ? "neon-text-gold" : level >= 80 ? "neon-text-cyan" : "text-bone-dim"
           }`}>
             {tierLabel}
-          </span>
-          <span className={`font-mono text-xs font-bold ${isGold ? "neon-text-gold" : "neon-text-cyan"}`}>
-            {level}%
           </span>
         </div>
       </div>
@@ -150,8 +147,8 @@ const SystemsMasteriesContent = () => {
 
   return (
     <div>
-      <p className="font-mono text-[10px] text-bone-dim mb-8 max-w-2xl">
-        Continuously evolving. Currently integrating LLMs and AI agents into legacy operational frameworks.
+        <p className="font-mono text-[10px] text-bone-dim mb-8 max-w-2xl">
+        A practical capability map: operations, information governance, automation, and knowledge transfer. Ratings indicate working depth, not a subjective percentage.
       </p>
 
       <div className="grid md:grid-cols-3 gap-5 mb-8">

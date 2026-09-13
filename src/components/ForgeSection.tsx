@@ -261,9 +261,9 @@ const FreelanceNode = ({ role }: { role: FreelanceRole }) => {
 /* ─── Tabs ─── */
 type TabKey = "service-logs" | "systems" | "nexus";
 const tabs: { key: TabKey; label: string }[] = [
-  { key: "service-logs", label: "SERVICE LOGS" },
-  { key: "systems", label: "SYSTEMS" },
-  { key: "nexus", label: "THE NEXUS" },
+  { key: "service-logs", label: "PROFESSIONAL RECORD" },
+  { key: "systems", label: "CAPABILITIES" },
+  { key: "nexus", label: "PROJECTS & RESEARCH" },
 ];
 
 /* ─── Main Component ─── */
@@ -275,10 +275,10 @@ const ForgeSection = () => {
       <div className="energy-beam-extra" />
       <div className="energy-beam-extra-2" />
       <ScrollRevealWrapper className="container mx-auto px-4 max-w-5xl relative z-10">
-        <h2 className="font-serif text-3xl md:text-4xl text-bone mb-1">The Forge</h2>
-        <p className="font-mono text-xs tracking-[0.2em] uppercase neon-text-cyan mb-4">Command Center</p>
+        <h2 className="font-serif text-3xl md:text-4xl text-bone mb-1">Professional Record</h2>
+        <p className="font-mono text-xs tracking-[0.2em] uppercase neon-text-cyan mb-4">Work, systems &amp; measurable outcomes</p>
 
-        <div className="relative glass-card rounded-sm overflow-hidden">
+          <div id="systems" className="relative glass-card rounded-sm overflow-hidden">
           <ScarletSparkles count={5} />
           {/* Tab bar */}
           <div className="relative flex overflow-x-auto scrollbar-hide border-b border-border bg-secondary/60">
@@ -305,8 +305,7 @@ const ForgeSection = () => {
                 <div className="px-3 py-2 border-l-2 border-primary/50 bg-primary/5 mb-4">
                   <p className="font-mono text-[10px] text-bone-dim leading-relaxed">
                     <span className="neon-text-gold mr-1">▸</span>
-                    Historical Node: Previously served as Technical &amp; Linguistic Capacitation Lead (2014-2018),
-                    laying the groundwork for current community governance.
+                    A career built across records, regulated operations, bilingual service, and AI-assisted process improvement.
                   </p>
                 </div>
 
