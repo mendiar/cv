@@ -618,12 +618,40 @@ footer{padding:1.1rem 1.5rem!important}
 
 <style>
 /* Professional hierarchy over legacy cyberpunk effects */
-:root { --purple-deep: #580f8b; --purple-bright: #7b20b5; --purple-glow: rgba(88,15,139,.42); }
+:root {
+  --purple-deep: #580f8b;
+  --purple-bright: #7b20b5;
+  --purple-soft: #c98cff;
+  --purple-glow: rgba(88,15,139,.42);
+  --violet: #9b5de5;
+  --olive: #718238;
+  --olive-soft: #a7b86a;
+}
 .hero-bio { max-width: 620px; }
 .intj-badge { border-color: rgba(212,160,23,.35) !important; }
 .professional-evidence { margin-top: 1.5rem; padding: .85rem 1rem; border-left: 2px solid var(--gold); background: rgba(8,13,26,.72); font-family: 'Share Tech Mono', monospace; font-size: .68rem; line-height: 1.6; color: rgba(221,213,192,.68); }
 .mbti-bars { display: none !important; }
-.forge-tab.active { border-bottom-color: var(--gold) !important; }
+.forge-tab.active { border-bottom-color: var(--purple-bright) !important; background: linear-gradient(180deg, rgba(88,15,139,.12), transparent) !important; }
+.nav-links a:hover, .mob-menu a:hover { color: var(--purple-soft) !important; }
+.lang-toggle:hover { border-color: var(--purple-bright) !important; color: var(--purple-soft) !important; box-shadow: 0 0 14px var(--purple-glow) !important; }
+.sec-title::after { background: linear-gradient(90deg, var(--gold), var(--purple-bright), transparent) !important; }
+.sec-line { background: linear-gradient(90deg, rgba(212,160,23,.45), rgba(123,32,181,.7), transparent) !important; }
+.arc-div { color: rgba(155,93,229,.48) !important; }
+.tl-node { background: linear-gradient(135deg, var(--gold), var(--purple-bright)) !important; box-shadow: 0 0 9px rgba(123,32,181,.5) !important; }
+.timeline::before { background: linear-gradient(180deg, var(--gold), var(--purple-bright), var(--olive), var(--gold)) !important; }
+.tag-g { border-color: rgba(113,130,56,.7) !important; color: var(--olive-soft) !important; background: rgba(113,130,56,.1) !important; }
+.tag-r { border-color: rgba(155,93,229,.48) !important; }
+.sys-col-title { text-shadow: 0 0 10px rgba(123,32,181,.45) !important; }
+.sys-col-sub { color: var(--purple-soft) !important; }
+.sys-fill::before { background-image: repeating-linear-gradient(90deg, var(--purple-bright) 0px, var(--purple-bright) 6px, transparent 6px, transparent 9px) !important; box-shadow: 0 0 6px rgba(123,32,181,.55) !important; }
+.sys-skill-lvl { color: var(--purple-soft) !important; }
+.infra-dot { background: var(--olive-soft) !important; box-shadow: 0 0 8px rgba(167,184,106,.6) !important; }
+.nexus-sub, .wiki-cat { color: var(--violet) !important; }
+.nexus-card:hover { border-color: rgba(123,32,181,.55) !important; box-shadow: 0 0 20px rgba(88,15,139,.16) !important; }
+.nexus-btn:hover { color: var(--purple-soft) !important; border-color: rgba(123,32,181,.7) !important; }
+.cn-item:hover { border-color: rgba(123,32,181,.65) !important; }
+.cn-label { color: var(--purple-soft) !important; }
+.status-dot { background: var(--olive-soft) !important; box-shadow: 0 0 6px rgba(167,184,106,.65); }
 .tag-p { color: #c98cff !important; border-color: rgba(123,32,181,.65) !important; background: rgba(88,15,139,.2) !important; }
 .omega-role { border-left: 2px solid var(--purple-bright) !important; box-shadow: inset 12px 0 24px rgba(88,15,139,.055); }
 .omega-role .tl-node { background: var(--purple-bright) !important; box-shadow: 0 0 10px var(--purple-glow) !important; }
@@ -783,6 +811,8 @@ footer{padding:1.1rem 1.5rem!important}
           <div class="tl-tags"><span class="tag tag-p">Healthcare</span><span class="tag tag-p">Epic</span><span class="tag tag-p">Salesforce CRM</span><span class="tag tag-r">Patient Access</span><span class="tag tag-b">Bilingual EN/ES</span></div>
           <ul class="tl-bullets">
             <li data-en="Schedule, reschedule, and cancel medical appointments for NYU Langone Health patients across New York and Florida, using Epic and Salesforce CRM workflows." data-es="Agendo, reagendo y cancelo citas médicas para pacientes de NYU Langone Health en Nueva York y Florida, utilizando flujos de trabajo en Epic y Salesforce CRM.">Schedule, reschedule, and cancel medical appointments for NYU Langone Health patients across New York and Florida, using Epic and Salesforce CRM workflows.</li>
+            <li data-en="Perform patient-access tasks in accordance with HIPAA requirements, protecting PHI while documenting interactions accurately and supporting internal quality standards." data-es="Realizo tareas de acceso de pacientes conforme a los requisitos de HIPAA, protegiendo la PHI, documentando con precisión las interacciones y apoyando los estándares internos de calidad.">Perform patient-access tasks in accordance with HIPAA requirements, protecting PHI while documenting interactions accurately and supporting internal quality standards.</li>
+            <li data-en="Create Vibe Coding tools currently under review by the corresponding teams, designed to support patient-experience quality metrics and internal quality prerogatives." data-es="Creo herramientas mediante Vibe Coding actualmente en revisión por los equipos correspondientes, diseñadas para coadyuvar al mejoramiento de las métricas de calidad en la experiencia del paciente y las prerrogativas internas de calidad.">Create Vibe Coding tools currently under review by the corresponding teams, designed to support patient-experience quality metrics and internal quality prerogatives.</li>
             <li data-en="Apply healthcare customer-service, patient-access, documentation, and compliance practices developed through prior Cigna Healthcare operations with Concentrix." data-es="Aplico conocimientos de servicio en salud, acceso de pacientes, documentación y cumplimiento desarrollados previamente en las operaciones de Cigna Healthcare con Concentrix.">Apply healthcare customer-service, patient-access, documentation, and compliance practices developed through prior Cigna Healthcare operations with Concentrix.</li>
           </ul>
         </div>
