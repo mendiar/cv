@@ -41,7 +41,7 @@ const allRoles: Role[] = [
     title: "Bilingual Operations Specialist",
     company: "Hired Experts / DS Solutions - Cordoba Legal Group",
     date: "Jun 2025 – Feb 2026",
-    tags: [{ label: "KPI/SLA/QA", color: "blue" }, { label: "Legal Documents", color: "red" }, { label: "AI Automation", color: "gold" }],
+    tags: [{ label: "Vibe Coding / AI Automation", color: "gold" }, { label: "KPI/SLA/QA", color: "blue" }, { label: "Legal Documents", color: "red" }],
     bullets: [
       "Managed end-to-end customer lifecycle for a U.S.-based debt resolution BPO, maintaining SLA compliance across efficiency, quality, and corporate compliance KPIs.",
       "Conducted complex case investigations for clients enrolled in debt resolution programs, applying legal document management expertise to ensure regulatory compliance.",
@@ -69,7 +69,7 @@ const allRoles: Role[] = [
     company: "Concentrix/Webhelp - CIGNA Healthcare",
     date: "Aug 2023 – Nov 2024",
     clearance: true,
-    tags: [{ label: "Healthcare", color: "blue" }, { label: "Medical Billing", color: "gold" }, { label: "Compliance", color: "red" }],
+    tags: [{ label: "HIPAA/PHI Governance", color: "red" }, { label: "Medical Billing", color: "gold" }, { label: "Healthcare", color: "blue" }],
     bullets: [
       "Administered multichannel healthcare support operations for CIGNA, ensuring compliance with QA metrics and strategic guidelines.",
       "Verified patient eligibility for medical services by reviewing CPT codes and insurance plan types (EPO, HMO, PPO), supporting patient access workflows.",
@@ -271,7 +271,7 @@ const ForgeSection = () => {
   const [activeTab, setActiveTab] = useState<TabKey>("service-logs");
 
   return (
-    <section id="forge" className="py-4 bg-stone-dark metallic-bg oil-texture relative scarlet-depth energy-beams">
+    <section id="forge" className="py-8 bg-stone-dark metallic-bg oil-texture relative scarlet-depth energy-beams">
       <div className="energy-beam-extra" />
       <div className="energy-beam-extra-2" />
       <ScrollRevealWrapper className="container mx-auto px-4 max-w-5xl relative z-10">

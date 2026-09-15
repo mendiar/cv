@@ -150,7 +150,7 @@ const SystemsMasteriesSection = () => {
   const { ref, visible } = useScrollReveal();
 
   return (
-    <section id="skills" className="py-24 bg-background">
+    <section id="skills" className="py-16 bg-background">
       <div
         ref={ref}
         className={`container mx-auto px-4 max-w-6xl transition-all duration-700 ${

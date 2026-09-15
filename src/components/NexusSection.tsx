@@ -211,7 +211,7 @@ const NexusSection = () => {
   const [searchQuery, setSearchQuery] = useState("");
 
   return (
-    <section id="nexus" className="py-24 bg-background relative">
+    <section id="nexus" className="py-16 bg-background relative">
       {/* Corner geometric accents */}
       <div className="absolute top-0 left-0 w-24 h-24 border-l border-t border-[hsl(var(--neon-crimson))]/20" />
       <div className="absolute top-0 right-0 w-24 h-24 border-r border-t border-accent/20" />
