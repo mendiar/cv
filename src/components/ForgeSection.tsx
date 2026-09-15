@@ -41,7 +41,7 @@ const allRoles: Role[] = [
     title: "Bilingual Operations Specialist",
     company: "Hired Experts / DS Solutions - Cordoba Legal Group",
     date: "Jun 2025 – Feb 2026",
-    tags: [{ label: "KPI/SLA/QA", color: "blue" }, { label: "Legal Documents", color: "red" }, { label: "AI Automation", color: "gold" }],
+    tags: [{ label: "Vibe Coding / AI Automation", color: "gold" }, { label: "KPI/SLA/QA", color: "blue" }, { label: "Legal Documents", color: "red" }],
     bullets: [
       "Managed end-to-end customer lifecycle for a U.S.-based debt resolution BPO, maintaining SLA compliance across efficiency, quality, and corporate compliance KPIs.",
       "Conducted complex case investigations for clients enrolled in debt resolution programs, applying legal document management expertise to ensure regulatory compliance.",
@@ -69,7 +69,7 @@ const allRoles: Role[] = [
     company: "Concentrix/Webhelp - CIGNA Healthcare",
     date: "Aug 2023 – Nov 2024",
     clearance: true,
-    tags: [{ label: "Healthcare", color: "blue" }, { label: "Medical Billing", color: "gold" }, { label: "Compliance", color: "red" }],
+    tags: [{ label: "HIPAA/PHI Governance", color: "red" }, { label: "Medical Billing", color: "gold" }, { label: "Healthcare", color: "blue" }],
     bullets: [
       "Administered multichannel healthcare support operations for CIGNA, ensuring compliance with QA metrics and strategic guidelines.",
       "Verified patient eligibility for medical services by reviewing CPT codes and insurance plan types (EPO, HMO, PPO), supporting patient access workflows.",
@@ -202,7 +202,7 @@ const TagBadge = ({ label, color }: { label: string; color: "blue" | "gold" | "r
   const colors = {
     blue: "border-accent/40 text-accent bg-accent/5",
     gold: "border-primary/40 text-primary bg-primary/5",
-    red: "border-[hsl(0_100%_50%_/_0.4)] text-[hsl(14_100%_57%)] bg-[hsl(0_100%_50%_/_0.05)]",
+    red: "border-[hsl(320_100%_55%_/_0.4)] text-[hsl(320_100%_65%)] bg-[hsl(320_100%_55%_/_0.05)]",
   };
   return (
     <span className={`inline-block px-1.5 py-0.5 text-[8px] font-mono tracking-wider uppercase border rounded-sm ${colors[color]}`}>
@@ -218,14 +218,14 @@ const FreelanceNode = ({ role }: { role: FreelanceRole }) => {
   return (
     <div className="relative glass-card p-4 md:p-5 rounded-sm circuit-border ironforge-hover">
       {/* Gold timeline dot */}
-      <div className="absolute -left-[41px] top-6 w-3 h-3 border-2 border-primary bg-background rounded-full shadow-[0_0_8px_hsl(43_90%_55%_/_0.4)]" />
+      <div className="absolute -left-[41px] top-6 w-3 h-3 border-2 border-primary bg-background rounded-full shadow-[0_0_8px_hsl(275_80%_65%_/_0.4)]" />
       <div className="flex items-center gap-2 mb-1">
         <Terminal size={12} className="neon-text-gold" />
-        <p className="font-mono text-[10px] neon-text-cyan">{role.date}</p>
+        <p className="font-mono text-[9px] uppercase tracking-[0.15em] neon-text-cyan">{role.date}</p>
         <span className="font-mono text-[8px] tracking-wider uppercase text-primary border border-primary/30 px-1.5 py-0.5 rounded-sm bg-primary/5">FREELANCE</span>
       </div>
-      <h3 className="font-serif text-lg md:text-xl text-bone mb-0.5">{role.title}</h3>
-      <p className="font-mono text-xs text-bone-dim mb-1">{role.company}</p>
+      <h3 className="font-serif tracking-tight text-lg md:text-xl text-bone mb-0.5">{role.title}</h3>
+      <p className="font-mono text-[11px] text-bone-dim mb-1">{role.company}</p>
       {role.tags && (
         <div className="flex flex-wrap gap-1 mb-2">
           {role.tags.map((tag, i) => <TagBadge key={i} label={tag.label} color={tag.color} />)}
@@ -233,7 +233,7 @@ const FreelanceNode = ({ role }: { role: FreelanceRole }) => {
       )}
       <button
         onClick={() => setExpanded(!expanded)}
-        className="flex items-center gap-1.5 font-mono text-[10px] tracking-[0.15em] uppercase text-accent hover:text-primary transition-colors"
+        className="flex items-center gap-1.5 font-mono text-[9px] uppercase tracking-[0.15em] tracking-[0.15em] uppercase text-accent hover:text-primary transition-colors"
       >
         <ChevronRight size={12} className={`transition-transform duration-300 ${expanded ? "rotate-90" : ""}`} />
         {expanded ? "COLLAPSE DEEP DIVE" : "TECHNICAL DEEP DIVE"}
@@ -271,12 +271,12 @@ const ForgeSection = () => {
   const [activeTab, setActiveTab] = useState<TabKey>("service-logs");
 
   return (
-    <section id="forge" className="py-4 bg-stone-dark metallic-bg oil-texture relative scarlet-depth energy-beams">
+    <section id="forge" className="py-8 bg-stone-dark metallic-bg oil-texture relative scarlet-depth energy-beams">
       <div className="energy-beam-extra" />
       <div className="energy-beam-extra-2" />
       <ScrollRevealWrapper className="container mx-auto px-4 max-w-5xl relative z-10">
-        <h2 className="font-serif text-3xl md:text-4xl text-bone mb-1">Professional Record</h2>
-        <p className="font-mono text-xs tracking-[0.2em] uppercase neon-text-cyan mb-4">Work, systems &amp; measurable outcomes</p>
+        <h2 className="font-serif tracking-tight text-3xl md:text-4xl text-bone mb-1">Professional Record</h2>
+        <p className="font-mono text-[11px] tracking-[0.2em] uppercase neon-text-cyan mb-4">Work, systems &amp; measurable outcomes</p>
 
           <div id="systems" className="relative glass-card rounded-sm overflow-hidden">
           <ScarletSparkles count={5} />
@@ -288,7 +288,7 @@ const ForgeSection = () => {
                 onClick={() => setActiveTab(tab.key)}
                 className={`shrink-0 px-4 sm:px-5 py-2.5 font-mono text-[11px] tracking-[0.15em] uppercase transition-all duration-300 border-b-2 whitespace-nowrap ${
                   activeTab === tab.key
-                    ? "border-[hsl(0_100%_50%)] neon-text-cyan bg-accent/5 shadow-[0_2px_12px_hsl(0_100%_50%_/_0.4),0_0_30px_hsl(14_100%_57%_/_0.2)]"
+                    ? "border-[hsl(320_100%_55%)] neon-text-cyan bg-accent/5 shadow-[0_2px_12px_hsl(320_100%_55%_/_0.4),0_0_30px_hsl(320_100%_65%_/_0.2)]"
                     : "border-transparent text-bone-dim hover:text-bone hover:bg-secondary/40"
                 }`}
               >
@@ -303,7 +303,7 @@ const ForgeSection = () => {
               <div className="space-y-2">
                 {/* Historical node */}
                 <div className="px-3 py-2 border-l-2 border-primary/50 bg-primary/5 mb-4">
-                  <p className="font-mono text-[10px] text-bone-dim leading-relaxed">
+                  <p className="font-mono text-[9px] uppercase tracking-[0.15em] text-bone-dim leading-relaxed">
                     <span className="neon-text-gold mr-1">▸</span>
                     A career built across records, regulated operations, bilingual service, and AI-assisted process improvement.
                   </p>
@@ -324,7 +324,7 @@ const ForgeSection = () => {
                           <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 mb-0.5">
                             <span className="font-mono text-[9px] neon-text-cyan shrink-0">{lr.date}</span>
                             <span className="hidden sm:inline font-mono text-[9px] text-bone-dim">|</span>
-                            <h4 className="font-serif text-sm text-bone">{lr.title}</h4>
+                            <h4 className="font-serif tracking-tight text-sm text-bone">{lr.title}</h4>
                           </div>
                           <p className="font-mono text-[9px] text-bone-dim mb-0.5">{lr.company}</p>
                           {lr.tags && (
@@ -343,10 +343,10 @@ const ForgeSection = () => {
                     const cr = role as CorporateRole;
                     return (
                       <div key={i} className="relative glass-card p-4 md:p-5 rounded-sm circuit-border pulse-glow ironforge-hover">
-                        <div className="absolute -left-[41px] top-6 w-3 h-3 border-2 border-accent bg-background rounded-full shadow-[0_0_8px_hsl(185_100%_50%_/_0.4)]" />
-                        <p className="font-mono text-[10px] neon-text-cyan mb-1">{cr.date}</p>
-                        <h3 className="font-serif text-lg md:text-xl text-bone mb-0.5">{cr.title}</h3>
-                        <p className="font-mono text-xs text-bone-dim mb-1">{cr.company}</p>
+                        <div className="absolute -left-[41px] top-6 w-3 h-3 border-2 border-accent bg-background rounded-full shadow-[0_0_8px_hsl(285_100%_65%_/_0.4)]" />
+                        <p className="font-mono text-[9px] uppercase tracking-[0.15em] neon-text-cyan mb-1">{cr.date}</p>
+                        <h3 className="font-serif tracking-tight text-lg md:text-xl text-bone mb-0.5">{cr.title}</h3>
+                        <p className="font-mono text-[11px] text-bone-dim mb-1">{cr.company}</p>
                         {cr.tags && (
                           <div className="flex flex-wrap gap-1 mb-2">
                             {cr.tags.map((tag, j) => <TagBadge key={j} label={tag.label} color={tag.color} />)}
@@ -359,7 +359,7 @@ const ForgeSection = () => {
                         )}
                         <ul className="space-y-2">
                           {cr.bullets.map((b, j) => (
-                            <li key={j} className="flex gap-2 text-xs text-bone-dim leading-tight">
+                            <li key={j} className="flex gap-2 text-[11px] text-bone-dim leading-tight">
                               <span className="neon-text-cyan mt-0.5 shrink-0">▸</span>
                               <span>{b}</span>
                             </li>

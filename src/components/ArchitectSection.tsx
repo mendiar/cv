@@ -12,16 +12,16 @@ const ArchitectSection = () => (
   <section id="architect" className="py-6 md:py-10 bg-background oil-texture relative scarlet-depth">
     <ScrollRevealWrapper className="container mx-auto px-4 max-w-5xl">
       <div className="flex items-end gap-3 mb-1">
-        <h2 className="font-serif text-3xl md:text-4xl text-bone">Working Principles</h2>
+        <h2 className="font-serif tracking-tight text-3xl md:text-4xl text-bone">Archeofuturist Principles</h2>
         <span className="font-mono text-[9px] tracking-wider uppercase px-2 py-0.5 border border-accent/40 text-accent rounded-sm bg-accent/5 mb-1">Professional method</span>
       </div>
-      <p className="font-mono text-xs tracking-[0.2em] uppercase neon-text-cyan mb-5">Systems thinking · Governance · Execution</p>
+      <p className="font-mono text-xs tracking-[0.2em] uppercase neon-text-cyan mb-5">HIPAA/PHI Governance · Vibe Coding · Order</p>
 
       <div className="grid lg:grid-cols-[1fr_1.35fr] gap-5 items-start">
         <div className="glass-card p-5 md:p-7 relative rounded-sm circuit-border">
           <div className="absolute top-0 left-0 w-16 h-px bg-accent" />
           <div className="absolute top-0 left-0 h-16 w-px bg-accent" />
-          <p className="text-sm md:text-base text-bone-dim leading-relaxed mb-4">
+          <p className="text-[12px] md:text-base text-bone-dim leading-relaxed mb-4">
             I bridge archival rigor, operational delivery, and AI-assisted tooling. The goal is not complexity for its own sake, but systems that remain understandable, auditable, and useful when the environment changes.
           </p>
           <p className="font-mono text-[10px] tracking-[0.14em] uppercase text-aged-gold border-l-2 border-primary/50 pl-3">
