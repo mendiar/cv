@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Fira Sans:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400;500&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -53,7 +53,7 @@
   * { @apply border-border; }
   html { scroll-behavior: smooth; }
   body { @apply bg-background text-foreground font-sans leading-tight; }
-  h1, h2, h3, h4, h5 { font-family: 'Playfair Display', serif; }
+  h1, h2, h3, h4, h5 { font-family: 'DM Serif Display', serif; }
   ::selection { background: hsl(185 88% 48% / 0.25); color: hsl(40 20% 95%); }
   ::-webkit-scrollbar { width: 5px; }
   ::-webkit-scrollbar-track { background: hsl(225 30% 3%); }
@@ -66,7 +66,7 @@
 
 .glass-card { background: hsl(225 25% 6% / .84); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid hsl(185 88% 48% / .11); transition: border-color .3s ease, transform .3s ease, box-shadow .3s ease; }
 .glass-card:hover { border-color: hsl(185 88% 48% / .35); transform: translateY(-1px); box-shadow: 0 0 18px hsl(185 88% 48% / .1), inset 0 0 14px hsl(185 88% 48% / .025); }
-.btn-terminal { position: relative; overflow: hidden; border: 1px solid hsl(185 88% 48% / .55); color: hsl(185 88% 60%); font-family: 'Roboto Mono', monospace; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; padding: 12px 24px; background: transparent; transition: all .25s ease; cursor: pointer; }
+.btn-terminal { position: relative; overflow: hidden; border: 1px solid hsl(185 88% 48% / .55); color: hsl(185 88% 60%); font-family: 'Fira Code', monospace; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; padding: 12px 24px; background: transparent; transition: all .25s ease; cursor: pointer; }
 .btn-terminal::before { content: '>'; margin-right: 8px; opacity: 0; transition: opacity .2s; }
 .btn-terminal:hover::before { opacity: 1; }
 .btn-terminal:hover { background: hsl(185 88% 48% / .08); border-color: hsl(185 88% 60%); box-shadow: 0 0 18px hsl(185 88% 48% / .22); transform: translateY(-1px); }
