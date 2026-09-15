@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Fira Sans:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Fira Sans:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -10,27 +10,27 @@
     --foreground: 275 10% 90%;
     --card: 275 35% 6%;
     --card-foreground: 275 10% 90%;
-    --popover: 225 25% 6%;
+    --popover: 275 35% 6%;
     --popover-foreground: 40 20% 90%;
     --primary: 275 80% 60%;
     --primary-foreground: 275 45% 3%;
-    --secondary: 225 25% 9%;
+    --secondary: 275 35% 9%;
     --secondary-foreground: 40 20% 90%;
-    --muted: 225 15% 14%;
+    --muted: 275 15% 14%;
     --muted-foreground: 220 10% 60%;
     --accent: 285 90% 65%;
     --accent-foreground: 40 20% 90%;
     --destructive: 0 65% 48%;
     --destructive-foreground: 0 0% 98%;
     --border: 275 30% 15%;
-    --input: 225 20% 14%;
+    --input: 275 20% 14%;
     --ring: 285 90% 65%;
     --radius: 0.25rem;
     --gold: 275 80% 60%;
     --gold-dim: 275 50% 45%;
     --neon-cyan: 285 90% 65%;
     --neon-crimson: 300 70% 30%;
-    --scarlet: 32320 75% 45%;
+    --scarlet: 320 75% 45%;
     --scarlet-bright: 320 82% 58%;
     --stone-dark: 275 45% 3%;
     --stone: 275 35% 6%;
@@ -38,13 +38,13 @@
     --bone: 275 10% 92%;
     --bone-dim: 275 5% 65%;
     --aged-gold: 275 40% 60%;
-    --sidebar-background: 225 30% 3%;
+    --sidebar-background: 275 45% 3%;
     --sidebar-foreground: 40 20% 90%;
     --sidebar-primary: 285 90% 65%;
     --sidebar-primary-foreground: 40 20% 90%;
-    --sidebar-accent: 225 20% 11%;
+    --sidebar-accent: 275 25% 10%;
     --sidebar-accent-foreground: 40 20% 90%;
-    --sidebar-border: 185 30% 18%;
+    --sidebar-border: 275 30% 15%;
     --sidebar-ring: 285 90% 65%;
   }
 }
@@ -64,12 +64,12 @@
 .scarlet-vignette::after { content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 98; background: radial-gradient(ellipse 80% 80% at 50% 50%, transparent 52%, hsl(300 70% 8% / .1) 88%, hsl(300 70% 5% / .2) 100%); }
 .noise-bg::after { content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 99; opacity: .018; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); background-repeat: repeat; background-size: 256px 256px; }
 
-.glass-card { background: hsl(225 25% 6% / .84); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid hsl(285 90% 65% / .11); transition: border-color .3s ease, transform .3s ease, box-shadow .3s ease; }
+.glass-card { background: hsl(275 35% 6% / .84); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid hsl(285 90% 65% / .11); transition: border-color .3s ease, transform .3s ease, box-shadow .3s ease; }
 .glass-card:hover { border-color: hsl(285 90% 65% / .35); transform: translateY(-1px); box-shadow: 0 0 18px hsl(285 90% 65% / .1), inset 0 0 14px hsl(285 90% 65% / .025); }
-.btn-terminal { position: relative; overflow: hidden; border: 1px solid hsl(285 90% 65% / .55); color: hsl(185 88% 60%); font-family: 'Fira Code', monospace; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; padding: 12px 24px; background: transparent; transition: all .25s ease; cursor: pointer; }
+.btn-terminal { position: relative; overflow: hidden; border: 1px solid hsl(285 90% 65% / .55); color: hsl(285 90% 70%); font-family: 'Fira Code', monospace; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; padding: 12px 24px; background: transparent; transition: all .25s ease; cursor: pointer; }
 .btn-terminal::before { content: '>'; margin-right: 8px; opacity: 0; transition: opacity .2s; }
 .btn-terminal:hover::before { opacity: 1; }
-.btn-terminal:hover { background: hsl(285 90% 65% / .08); border-color: hsl(185 88% 60%); box-shadow: 0 0 18px hsl(285 90% 65% / .22); transform: translateY(-1px); }
+.btn-terminal:hover { background: hsl(285 90% 65% / .08); border-color: hsl(285 90% 70%); box-shadow: 0 0 18px hsl(285 90% 65% / .22); transform: translateY(-1px); }
 .btn-terminal-gold { border-color: hsl(275 80% 60% / .65); color: hsl(275 80% 70%); }
 .btn-terminal-gold:hover { background: hsl(275 80% 60% / .09); border-color: hsl(275 80% 70%); box-shadow: 0 0 18px hsl(275 80% 60% / .22); }
 .neon-text-cyan { color: hsl(285 90% 70%); text-shadow: 0 0 10px hsl(285 90% 65% / .28); }

@@ -7,7 +7,7 @@ const DigitalAlchemy = () => (
     <div className="glass-card p-5 rounded-sm circuit-border group ironforge-hover">
       <div className="flex items-center gap-3 mb-2">
         <Cpu size={16} className="neon-text-cyan icon-heated" />
-        <h4 className="font-serif text-base text-bone group-hover:neon-text-gold transition-colors glitch-hover">
+        <h4 className="font-serif tracking-tight text-base text-bone group-hover:neon-text-gold transition-colors glitch-hover">
           Diakos Logic & DevMind
         </h4>
       </div>
@@ -28,7 +28,7 @@ const DigitalAlchemy = () => (
       <div className="absolute inset-0 bg-[hsl(var(--neon-crimson))]/[0.02]" />
       <div className="relative flex items-center gap-3 mb-2">
         <Sparkles size={16} className="neon-text-scarlet animate-pulse" />
-        <h4 className="font-serif text-base text-bone-dim">Future Deployments</h4>
+        <h4 className="font-serif tracking-tight text-base text-bone-dim">Future Deployments</h4>
       </div>
       <p className="relative text-[11px] text-bone-dim/60 font-mono leading-relaxed">
         Upcoming frameworks and experimental builds currently in development pipeline.
@@ -48,7 +48,7 @@ const CivitasSection = () => (
         <Cpu size={9} className="absolute -bottom-0.5 -right-0.5 neon-text-scarlet" />
       </div>
       <div>
-        <h4 className="font-serif text-base text-bone glitch-hover">Social Systems Engineering</h4>
+        <h4 className="font-serif tracking-tight text-base text-bone glitch-hover">Social Systems Engineering</h4>
         <p className="font-mono text-[9px] tracking-[0.2em] uppercase text-bone-dim">
           President · Community Action Board & Foundation Co-Founder
         </p>
@@ -132,7 +132,7 @@ const AtheneumArchive = () => {
       <div className="glass-card p-5 rounded-sm circuit-border">
         <div className="flex items-center gap-3 mb-2">
           <BookOpen size={16} className="neon-text-cyan icon-heated" />
-          <h4 className="font-serif text-base text-bone">The Atheneum</h4>
+          <h4 className="font-serif tracking-tight text-base text-bone">The Atheneum</h4>
         </div>
         <p className="text-[11px] text-bone-dim leading-relaxed font-mono italic mb-3">
           "In an age of digital entropy, I build structures of permanence. This is the Atheneum: a
@@ -150,7 +150,7 @@ const AtheneumArchive = () => {
               onClick={() => handleCategoryClick(cat.category)}
               className={`flex items-center gap-2 px-3 py-1.5 font-mono text-[10px] tracking-wider uppercase border rounded-sm transition-all duration-300 ${
                 isActive
-                  ? "border-accent text-accent shadow-[0_0_12px_hsl(185_100%_42%_/_0.2)] bg-accent/5"
+                  ? "border-accent text-accent shadow-[0_0_12px_hsl(285_90%_60%_/_0.2)] bg-accent/5"
                   : "border-border text-bone-dim hover:border-accent/50 hover:text-accent"
               }`}
             >
@@ -182,7 +182,7 @@ const AtheneumArchive = () => {
                   <span className="neon-text-cyan">|</span>
                   <span>{entry.readTime}</span>
                 </div>
-                <h5 className="font-serif text-sm text-bone mb-1.5 group-hover:neon-text-gold transition-colors glitch-hover">
+                <h5 className="font-serif tracking-tight text-sm text-bone mb-1.5 group-hover:neon-text-gold transition-colors glitch-hover">
                   {entry.title}
                 </h5>
                 <p className="text-[11px] text-bone-dim leading-relaxed">{entry.abstract}</p>
@@ -254,7 +254,7 @@ const NexusSectionContent = () => {
       <div className="grid lg:grid-cols-2 gap-3">
         <div className="space-y-3">
           <div>
-            <h3 className="font-serif text-base text-bone mb-1 flex items-center gap-2">
+            <h3 className="font-serif tracking-tight text-base text-bone mb-1 flex items-center gap-2">
               <Cpu size={14} className="neon-text-cyan icon-heated" />
               Projects &amp; Automation
             </h3>
@@ -263,7 +263,7 @@ const NexusSectionContent = () => {
           </div>
 
           <div>
-            <h3 className="font-serif text-base text-bone mb-1 flex items-center gap-2">
+            <h3 className="font-serif tracking-tight text-base text-bone mb-1 flex items-center gap-2">
               <Users size={14} className="neon-text-gold icon-heated" />
               Community &amp; Governance
             </h3>
@@ -273,7 +273,7 @@ const NexusSectionContent = () => {
         </div>
 
         <div>
-          <h3 className="font-serif text-base text-bone mb-1 flex items-center gap-2">
+          <h3 className="font-serif tracking-tight text-base text-bone mb-1 flex items-center gap-2">
             <BookOpen size={14} className="neon-text-cyan icon-heated" />
               Research Archive
           </h3>

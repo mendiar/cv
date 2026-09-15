@@ -11,8 +11,8 @@ const skillDescriptions: Record<string, string> = {
   "Escalation Management": "[STATUS: ACTIVE] - Routing and resolving escalated cases through tiered support hierarchies.",
   "Multichannel Support (Voice, Email, Chat)": "[STATUS: ACTIVE] - Delivering seamless support across all communication channels.",
   "Customer Onboarding": "[STATUS: ACTIVE] - Designing and executing onboarding workflows for maximum client retention.",
-  "AI Workflow Automation": "[STATUS: DEVELOPING] - Deploying AI-assisted pipelines to eliminate manual bottlenecks in operations.",
-  "Vibe Coding": "[STATUS: DEVELOPING] - Deploying AI-assisted code structures for process optimization.",
+  "AI Workflow Automation": "[STATUS: ACTIVE] - Deploying AI-assisted pipelines to eliminate manual bottlenecks in operations.",
+  "Vibe Coding": "[STATUS: ACTIVE] - Deploying AI-assisted code structures for process optimization.",
   "ChatGPT/Claude AI Integration": "[STATUS: ACTIVE] - Leveraging large language models for internal tool development and automation.",
   "CRM Administration (Salesforce, Oracle, Zendesk)": "[STATUS: ACTIVE] - Configuring and maintaining CRM platforms for enterprise-grade operations.",
   "Microsoft Excel (Expert/Macros)": "[STATUS: EXPERT] - Building automated spreadsheet workflows with advanced formulas and VBA macros.",
@@ -20,13 +20,13 @@ const skillDescriptions: Record<string, string> = {
   "WFM Applications": "[STATUS: ACTIVE] - Utilizing Workforce Management tools for scheduling and resource optimization.",
   "Information Governance": "[STATUS: EXPERT] - Implementing data governance frameworks aligned with regulatory standards.",
   "Records Management": "[STATUS: EXPERT] - Administering records lifecycle from creation to disposition per archival protocols.",
-  "HIPAA Compliance": "[STATUS: DEVELOPING] - Ensuring Protected Health Information handling meets federal healthcare regulations.",
+  "HIPAA/PHI Governance": "[STATUS: ACTIVE] - Ensuring Protected Health Information handling meets federal healthcare regulations.",
   "PII Data Privacy": "[STATUS: ACTIVE] - Enforcing personally identifiable information protection across all data touchpoints.",
   "Legal Document Administration": "[STATUS: ACTIVE] - Managing legal records with chain-of-custody integrity and regulatory compliance.",
   "Archival Science Standards (ISAD(G), ISAAR)": "[STATUS: EXPERT] - Applying international archival description standards to information systems.",
   "Eligibility Verification": "[STATUS: ACTIVE] - Verifying patient and client eligibility through CPT codes and insurance plan protocols.",
-  "Project Management": "[STATUS: DEVELOPING] - Coordinating cross-functional teams and deliverables across operational timelines.",
-  "Financial Market Analysis": "[STATUS: DEVELOPING] - Analyzing Forex and Equities trends through a praxeological lens.",
+  "Project Management": "[STATUS: ACTIVE] - Coordinating cross-functional teams and deliverables across operational timelines.",
+  "Financial Market Analysis": "[STATUS: ACTIVE] - Analyzing Forex and Equities trends through a praxeological lens.",
   "Spanish (Native)": "[STATUS: EXPERT] - Native-level proficiency across all professional and technical domains.",
   "English (C1 Proficiency)": "[STATUS: ACTIVE] - Advanced bilingual operations across U.S. enterprise clients.",
 };
@@ -75,7 +75,7 @@ const categories = [
     skills: [
       { name: "Information Governance", level: 92 },
       { name: "Records Management", level: 95 },
-      { name: "HIPAA Compliance", level: 65 },
+      { name: "HIPAA/PHI Governance", level: 65 },
       { name: "PII Data Privacy", level: 85 },
       { name: "Legal Document Administration", level: 85 },
       { name: "Archival Science Standards (ISAD(G), ISAAR)", level: 93 },
@@ -96,7 +96,7 @@ const SkillTag = ({
   <span
     onMouseEnter={() => onHover(name)}
     onMouseLeave={() => onHover(null)}
-    className="inline-flex items-center gap-1.5 font-mono text-[10px] tracking-wider uppercase px-3 py-1.5 border border-border rounded-sm bg-secondary/50 text-bone-dim hover:text-accent hover:border-accent/50 hover:shadow-[0_0_10px_hsl(185_100%_42%_/_0.15)] transition-all duration-300 cursor-default icon-heated"
+    className="inline-flex items-center gap-1.5 font-mono text-[10px] tracking-wider uppercase px-3 py-1.5 border border-border rounded-sm bg-secondary/50 text-bone-dim hover:text-accent hover:border-accent/50 hover:shadow-[0_0_10px_hsl(285_90%_60%_/_0.15)] transition-all duration-300 cursor-default icon-heated"
   >
     {name}
     {aiEnhanced && <Sparkles size={10} className="text-primary" />}
@@ -128,8 +128,8 @@ const DigitalMeter = ({ level, color, name }: { level: number; color: "gold" | "
             className={`flex-1 rounded-[1px] transition-all duration-500 ${
               i < filledSegments
                 ? isGold
-                  ? "bg-primary shadow-[0_0_4px_hsl(43_90%_55%_/_0.5)]"
-                  : "bg-accent shadow-[0_0_4px_hsl(185_100%_50%_/_0.4)]"
+                  ? "bg-primary shadow-[0_0_4px_hsl(275_80%_65%_/_0.5)]"
+                  : "bg-accent shadow-[0_0_4px_hsl(285_100%_65%_/_0.4)]"
                 : "bg-secondary/60"
             }`}
             style={{ transitionDelay: `${i * 30}ms` }}
@@ -159,7 +159,7 @@ const SystemsMasteriesContent = () => {
               <ScarletSparkles count={4} />
               <div className="flex items-center gap-3 mb-1">
                 <Icon size={16} className={`${cat.color === "gold" ? "neon-text-gold" : "neon-text-cyan"} icon-heated`} />
-                <h3 className="font-serif text-base text-bone">{cat.title}</h3>
+                <h3 className="font-serif tracking-tight text-base text-bone">{cat.title}</h3>
               </div>
               <p className="font-mono text-[9px] tracking-[0.2em] uppercase text-bone-dim mb-4">
                 {cat.subtitle}

@@ -55,7 +55,7 @@ const LoadingScreen = ({ onComplete }: { onComplete: () => void }) => {
       <div className="w-64 md:w-80 mb-4">
         <div className="h-px w-full bg-border overflow-hidden">
           <div
-            className="h-full bg-accent transition-all duration-100 shadow-[0_0_10px_hsl(185_100%_50%_/_0.5)]"
+            className="h-full bg-accent transition-all duration-100 shadow-[0_0_10px_hsl(285_100%_65%_/_0.5)]"
             style={{ width: `${progress}%` }}
           />
         </div>

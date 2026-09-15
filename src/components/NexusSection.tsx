@@ -8,7 +8,7 @@ const DigitalAlchemy = () => (
     <div className="glass-card p-6 rounded-sm circuit-border group">
       <div className="flex items-center gap-3 mb-3">
         <Cpu size={18} className="neon-text-cyan" />
-        <h4 className="font-serif text-lg text-bone group-hover:neon-text-gold transition-colors glitch-hover">
+        <h4 className="font-serif tracking-tight text-lg text-bone group-hover:neon-text-gold transition-colors glitch-hover">
           Diakos Logic & DevMind
         </h4>
       </div>
@@ -29,7 +29,7 @@ const DigitalAlchemy = () => (
       <div className="absolute inset-0 bg-[hsl(var(--neon-crimson))]/[0.02]" />
       <div className="relative flex items-center gap-3 mb-3">
         <Sparkles size={18} className="text-[hsl(var(--neon-crimson))] animate-pulse" />
-        <h4 className="font-serif text-lg text-bone-dim">Future Deployments</h4>
+        <h4 className="font-serif tracking-tight text-lg text-bone-dim">Future Deployments</h4>
       </div>
       <p className="relative text-xs text-bone-dim/60 font-mono leading-relaxed">
         Upcoming frameworks and experimental builds currently in development pipeline.
@@ -50,7 +50,7 @@ const CivitasSection = () => (
         <Cpu size={10} className="absolute -bottom-0.5 -right-0.5 text-accent" />
       </div>
       <div>
-        <h4 className="font-serif text-lg text-bone glitch-hover">Social Systems Engineering</h4>
+        <h4 className="font-serif tracking-tight text-lg text-bone glitch-hover">Social Systems Engineering</h4>
         <p className="font-mono text-[9px] tracking-[0.2em] uppercase text-bone-dim">
           President · Community Action Board & Foundation Co-Founder
         </p>
@@ -137,7 +137,7 @@ const AtheneumArchive = () => {
       <div className="glass-card p-6 rounded-sm circuit-border">
         <div className="flex items-center gap-3 mb-3">
           <BookOpen size={18} className="neon-text-cyan" />
-          <h4 className="font-serif text-lg text-bone">The Atheneum</h4>
+          <h4 className="font-serif tracking-tight text-lg text-bone">The Atheneum</h4>
         </div>
         <p className="text-xs text-bone-dim leading-relaxed font-mono italic mb-4">
           "In an age of digital entropy, I build structures of permanence. This is the Atheneum: a
@@ -157,7 +157,7 @@ const AtheneumArchive = () => {
               onClick={() => handleCategoryClick(cat.category)}
               className={`flex items-center gap-2 px-3 py-2 font-mono text-[10px] tracking-wider uppercase border rounded-sm transition-all duration-300 ${
                 isActive
-                  ? "border-accent text-accent shadow-[0_0_12px_hsl(185_100%_50%_/_0.2)] bg-accent/5"
+                  ? "border-accent text-accent shadow-[0_0_12px_hsl(285_100%_65%_/_0.2)] bg-accent/5"
                   : "border-border text-bone-dim hover:border-accent/50 hover:text-accent"
               }`}
             >
@@ -191,7 +191,7 @@ const AtheneumArchive = () => {
                   <span className="text-accent">|</span>
                   <span>{entry.readTime}</span>
                 </div>
-                <h5 className="font-serif text-base text-bone mb-2 group-hover:neon-text-gold transition-colors glitch-hover">
+                <h5 className="font-serif tracking-tight text-base text-bone mb-2 group-hover:neon-text-gold transition-colors glitch-hover">
                   {entry.title}
                 </h5>
                 <p className="text-xs text-bone-dim leading-relaxed">{entry.abstract}</p>
@@ -219,7 +219,7 @@ const NexusSection = () => {
       <div className="absolute bottom-0 right-0 w-24 h-24 border-r border-b border-[hsl(var(--neon-crimson))]/20" />
 
       <ScrollRevealWrapper className="container mx-auto px-4 max-w-6xl">
-        <h2 className="font-serif text-3xl md:text-4xl text-bone mb-2 glitch-hover inline-block">The Nexus</h2>
+        <h2 className="font-serif tracking-tight text-3xl md:text-4xl text-bone mb-2 glitch-hover inline-block">The Nexus</h2>
         <p className="font-mono text-xs tracking-[0.2em] uppercase neon-text-cyan mb-8">
           Laboratory & Intellectual Archive
         </p>
@@ -249,7 +249,7 @@ const NexusSection = () => {
           {/* Left column */}
           <div className="space-y-6">
             <div>
-              <h3 className="font-serif text-xl text-bone mb-1 flex items-center gap-2">
+              <h3 className="font-serif tracking-tight text-xl text-bone mb-1 flex items-center gap-2">
                 <Cpu size={16} className="neon-text-cyan" />
                 Digital Alchemy
               </h3>
@@ -258,7 +258,7 @@ const NexusSection = () => {
             </div>
 
             <div>
-              <h3 className="font-serif text-xl text-bone mb-1 flex items-center gap-2">
+              <h3 className="font-serif tracking-tight text-xl text-bone mb-1 flex items-center gap-2">
                 <Users size={16} className="neon-text-gold" />
                 Civitas & Leadership
               </h3>
@@ -269,7 +269,7 @@ const NexusSection = () => {
 
           {/* Right column - Atheneum */}
           <div>
-            <h3 className="font-serif text-xl text-bone mb-1 flex items-center gap-2">
+            <h3 className="font-serif tracking-tight text-xl text-bone mb-1 flex items-center gap-2">
               <BookOpen size={16} className="neon-text-cyan" />
               The Atheneum
             </h3>

@@ -12,7 +12,7 @@ const skillDescriptions: Record<string, string> = {
   "Multichannel Support (Voice, Email, Chat)": "[STATUS: ACTIVE] - Delivering seamless support across all communication channels.",
   "Customer Onboarding": "[STATUS: ACTIVE] - Designing and executing onboarding workflows for maximum client retention.",
   "AI Workflow Automation": "[STATUS: DEVELOPING] - Deploying AI-assisted pipelines to eliminate manual bottlenecks in operations.",
-  "Vibe Coding": "[STATUS: DEVELOPING] - Deploying AI-assisted code structures for process optimization.",
+  "Vibe Coding": "[STATUS: ACTIVE] - Deploying AI-assisted code structures for process optimization.",
   "ChatGPT/Claude AI Integration": "[STATUS: ACTIVE] - Leveraging large language models for internal tool development and automation.",
   "CRM Administration (Salesforce, Oracle, Zendesk)": "[STATUS: ACTIVE] - Configuring and maintaining CRM platforms for enterprise-grade operations.",
   "Microsoft Excel (Expert/Macros)": "[STATUS: EXPERT] - Building automated spreadsheet workflows with advanced formulas and VBA macros.",
@@ -20,7 +20,7 @@ const skillDescriptions: Record<string, string> = {
   "WFM Applications": "[STATUS: ACTIVE] - Utilizing Workforce Management tools for scheduling and resource optimization.",
   "Information Governance": "[STATUS: EXPERT] - Implementing data governance frameworks aligned with regulatory standards.",
   "Records Management": "[STATUS: EXPERT] - Administering records lifecycle from creation to disposition per archival protocols.",
-  "HIPAA Compliance": "[STATUS: DEVELOPING] - Ensuring Protected Health Information handling meets federal healthcare regulations.",
+  "HIPAA Compliance": "[STATUS: ACTIVE] - Ensuring Protected Health Information handling meets federal healthcare regulations.",
   "PII Data Privacy": "[STATUS: ACTIVE] - Enforcing personally identifiable information protection across all data touchpoints.",
   "Legal Document Administration": "[STATUS: ACTIVE] - Managing legal records with chain-of-custody integrity and regulatory compliance.",
   "Archival Science Standards (ISAD(G), ISAAR)": "[STATUS: EXPERT] - Applying international archival description standards to information systems.",
@@ -96,7 +96,7 @@ const SkillTag = ({
   <span
     onMouseEnter={() => onHover(name)}
     onMouseLeave={() => onHover(null)}
-    className="inline-flex items-center gap-1.5 font-mono text-[10px] tracking-wider uppercase px-3 py-1.5 border border-border rounded-sm bg-secondary/50 text-bone-dim hover:text-accent hover:border-accent hover:shadow-[0_0_10px_hsl(185_100%_50%_/_0.2)] transition-all duration-300 cursor-default"
+    className="inline-flex items-center gap-1.5 font-mono text-[10px] tracking-wider uppercase px-3 py-1.5 border border-border rounded-sm bg-secondary/50 text-bone-dim hover:text-accent hover:border-accent hover:shadow-[0_0_10px_hsl(285_100%_65%_/_0.2)] transition-all duration-300 cursor-default"
   >
     {name}
     {aiEnhanced && <Sparkles size={10} className="text-primary" />}
@@ -131,8 +131,8 @@ const DigitalMeter = ({ level, color, name }: { level: number; color: "gold" | "
             className={`flex-1 rounded-[1px] transition-all duration-500 ${
               i < filledSegments
                 ? isGold
-                  ? "bg-primary shadow-[0_0_4px_hsl(43_90%_55%_/_0.5)]"
-                  : "bg-accent shadow-[0_0_4px_hsl(185_100%_50%_/_0.5)]"
+                  ? "bg-primary shadow-[0_0_4px_hsl(275_80%_65%_/_0.5)]"
+                  : "bg-accent shadow-[0_0_4px_hsl(285_100%_65%_/_0.5)]"
                 : "bg-secondary/60"
             }`}
             style={{ transitionDelay: `${i * 30}ms` }}
@@ -157,7 +157,7 @@ const SystemsMasteriesSection = () => {
           visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}
       >
-        <h2 className="font-serif text-3xl md:text-4xl text-bone mb-2">
+        <h2 className="font-serif tracking-tight text-3xl md:text-4xl text-bone mb-2">
           Systems &amp; Masteries
         </h2>
         <p className="font-mono text-xs tracking-[0.2em] uppercase neon-text-cyan mb-2">
@@ -177,7 +177,7 @@ const SystemsMasteriesSection = () => {
                     size={18}
                     className={cat.color === "gold" ? "neon-text-gold" : "neon-text-cyan"}
                   />
-                  <h3 className="font-serif text-lg text-bone">{cat.title}</h3>
+                  <h3 className="font-serif tracking-tight text-lg text-bone">{cat.title}</h3>
                 </div>
                 <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-bone-dim mb-5">
                   {cat.subtitle}
