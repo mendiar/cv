@@ -14,8 +14,8 @@ const skillDescriptions: Record<string, string> = {
   "AI Workflow Automation": "[STATUS: ACTIVE] - Deploying AI-assisted pipelines to eliminate manual bottlenecks in operations.",
   "Vibe Coding": "[STATUS: ACTIVE] - Deploying AI-assisted code structures for process optimization.",
   "ChatGPT/Claude AI Integration": "[STATUS: ACTIVE] - Leveraging large language models for internal tool development and automation.",
-  "CRM Administration (Salesforce, Oracle, Zendesk)": "[STATUS: ACTIVE] - Configuring and maintaining CRM platforms for enterprise-grade operations.",
-  "Microsoft Excel (Expert/Macros)": "[STATUS: EXPERT] - Building automated spreadsheet workflows with advanced formulas and VBA macros.",
+  "CRM Systems (Salesforce)": "[STATUS: ACTIVE] - Daily work in Salesforce for case tracking and patient access operations.",
+  "Microsoft Excel (Intermediate–Advanced)": "[STATUS: ADVANCED] - Building spreadsheet workflows with formulas, pivot tables, and data analysis.",
   "Notion Architecture": "[STATUS: ACTIVE] - Designing knowledge management systems and collaboration frameworks in Notion.",
   "WFM Applications": "[STATUS: ACTIVE] - Utilizing Workforce Management tools for scheduling and resource optimization.",
   "Information Governance": "[STATUS: EXPERT] - Implementing data governance frameworks aligned with regulatory standards.",
@@ -28,7 +28,7 @@ const skillDescriptions: Record<string, string> = {
   "Project Management": "[STATUS: ACTIVE] - Coordinating cross-functional teams and deliverables across operational timelines.",
   "Financial Market Analysis": "[STATUS: ACTIVE] - Analyzing Forex and Equities trends through a praxeological lens.",
   "Spanish (Native)": "[STATUS: EXPERT] - Native-level proficiency across all professional and technical domains.",
-  "English (C1 Proficiency)": "[STATUS: ACTIVE] - Advanced bilingual operations across U.S. enterprise clients.",
+  "English (B2+/C1)": "[STATUS: ACTIVE] - Advanced bilingual operations with U.S. enterprise clients.",
 };
 
 const categories = [
@@ -60,8 +60,8 @@ const categories = [
       { name: "AI Workflow Automation", level: 65 },
       { name: "Vibe Coding", level: 60 },
       { name: "ChatGPT/Claude AI Integration", level: 70 },
-      { name: "CRM Administration (Salesforce, Oracle, Zendesk)", level: 85 },
-      { name: "Microsoft Excel (Expert/Macros)", level: 95 },
+      { name: "CRM Systems (Salesforce)", level: 85 },
+      { name: "Microsoft Excel (Intermediate–Advanced)", level: 80 },
       { name: "Notion Architecture", level: 80 },
       { name: "WFM Applications", level: 75 },
     ],

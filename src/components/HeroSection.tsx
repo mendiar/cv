@@ -4,8 +4,8 @@ import portrait from "@/assets/diego-portrait.jpg";
 const stats = [
   { value: "10+", label: "Years of experience" },
   { value: "6", label: "Industry sectors" },
-  { value: "C1", label: "English proficiency" },
-  { value: "20K+", label: "Records processed" },
+  { value: "B2+/C1", label: "English proficiency" },
+  { value: "25K+", label: "Historical plans processed" },
 ];
 
 const chips = [
