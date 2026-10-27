@@ -1,68 +1,43 @@
-import { useState, FormEvent } from "react";
-import { Send } from "lucide-react";
+import { useEffect } from "react";
 
 const ContactForm = () => {
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
-  const [sent, setSent] = useState(false);
+  useEffect(() => {
+    const tallyWindow = window as Window & {
+      Tally?: { loadEmbeds?: () => void };
+    };
+    const scriptSrc = "https://tally.so/widgets/embed.js";
 
-  const handleSubmit = (e: FormEvent) => {
-    e.preventDefault();
-    // mailto fallback
-    const subject = encodeURIComponent(`Contact from ${form.name}`);
-    const body = encodeURIComponent(`Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`);
-    window.open(`mailto:mendiar88@proton.me?subject=${subject}&body=${body}`);
-    setSent(true);
-    setTimeout(() => setSent(false), 3000);
-  };
+    if (!document.querySelector(`script[src="${scriptSrc}"]`)) {
+      const script = document.createElement("script");
+      script.src = scriptSrc;
+      script.onload = () => tallyWindow.Tally?.loadEmbeds?.();
+      document.body.appendChild(script);
+    }
+
+    if (tallyWindow.Tally) {
+      tallyWindow.Tally?.loadEmbeds?.();
+    }
+  }, []);
 
   return (
-    <form onSubmit={handleSubmit} className="glass-card p-6 md:p-8 rounded-sm max-w-lg mx-auto circuit-border">
-      <h3 className="font-serif tracking-tight text-lg text-bone mb-1">Transmit Signal</h3>
-      <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-bone-dim mb-6">Secure Communication Channel</p>
-
-      <div className="space-y-4">
-        <div>
-          <label className="font-mono text-[10px] tracking-wider uppercase text-bone-dim block mb-1">Designation</label>
-          <input
-            required
-            value={form.name}
-            onChange={(e) => setForm({ ...form, name: e.target.value })}
-            className="w-full bg-secondary/50 border border-border rounded-sm px-3 py-2 font-mono text-xs text-bone placeholder:text-bone-dim/40 focus:border-accent focus:shadow-[0_0_10px_hsl(285_100%_65%_/_0.15)] focus:outline-none transition-all"
-            placeholder="Enter designation..."
-          />
-        </div>
-        <div>
-          <label className="font-mono text-[10px] tracking-wider uppercase text-bone-dim block mb-1">Signal Address</label>
-          <input
-            required
-            type="email"
-            value={form.email}
-            onChange={(e) => setForm({ ...form, email: e.target.value })}
-            className="w-full bg-secondary/50 border border-border rounded-sm px-3 py-2 font-mono text-xs text-bone placeholder:text-bone-dim/40 focus:border-accent focus:shadow-[0_0_10px_hsl(285_100%_65%_/_0.15)] focus:outline-none transition-all"
-            placeholder="Enter signal address..."
-          />
-        </div>
-        <div>
-          <label className="font-mono text-[10px] tracking-wider uppercase text-bone-dim block mb-1">Transmission</label>
-          <textarea
-            required
-            rows={4}
-            value={form.message}
-            onChange={(e) => setForm({ ...form, message: e.target.value })}
-            className="w-full bg-secondary/50 border border-border rounded-sm px-3 py-2 font-mono text-xs text-bone placeholder:text-bone-dim/40 focus:border-accent focus:shadow-[0_0_10px_hsl(285_100%_65%_/_0.15)] focus:outline-none transition-all resize-none"
-            placeholder="Compose transmission..."
-          />
-        </div>
-      </div>
-
-      <button
-        type="submit"
-        className="btn-terminal mt-6 w-full flex items-center justify-center gap-2"
-      >
-        <Send size={12} />
-        {sent ? "SIGNAL TRANSMITTED" : "TRANSMIT"}
-      </button>
-    </form>
+    <div className="max-w-3xl mx-auto w-full px-4 glass-card circuit-border rounded-sm py-6 md:py-8 min-w-0">
+      <h3 className="font-serif tracking-tight text-3xl md:text-4xl text-bone mb-2">
+        Send a Message or Document
+      </h3>
+      <p className="text-sm text-bone-dim mb-6">
+        Anonymous by default. Attach files up to 10 MB each (PDF, DOCX, JPG, PNG).
+      </p>
+      <iframe
+        data-tally-src="https://tally.so/embed/Eqq0WA?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1&formEventsForwarding=1"
+        loading="lazy"
+        width="100%"
+        height="748"
+        frameBorder="0"
+        marginHeight={0}
+        marginWidth={0}
+        title="Send a message or document"
+      />
+    </div>
   );
 };
 

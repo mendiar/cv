@@ -50,7 +50,7 @@ const CivitasSection = () => (
       <div>
         <h4 className="font-serif tracking-tight text-base text-bone glitch-hover">Social Systems Engineering</h4>
         <p className="font-mono text-[9px] tracking-[0.2em] uppercase text-bone-dim">
-          President · Community Action Board & Foundation Co-Founder
+          President, Community Action Board (2018–2026) · Foundation Co-Founder
         </p>
       </div>
     </div>

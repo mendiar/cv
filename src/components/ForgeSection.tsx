@@ -19,7 +19,6 @@ interface BaseRole {
 interface CorporateRole extends BaseRole {
   type: "corporate";
   bullets: string[];
-  clearance?: boolean;
 }
 
 interface FreelanceRole extends BaseRole {
@@ -38,6 +37,17 @@ type Role = CorporateRole | FreelanceRole | LegacyRole;
 const allRoles: Role[] = [
   {
     type: "corporate",
+    title: "Patient Access Center Representative",
+    company: "Omega Healthcare",
+    date: "Apr 2026 – Present",
+    tags: [{ label: "Epic EHR", color: "blue" }, { label: "Salesforce", color: "gold" }, { label: "Patient Access", color: "blue" }],
+    bullets: [
+      "Daily work in Epic (EHR) and Salesforce for patient access operations since the start of training.",
+      "Handling patient access workflows for U.S. healthcare clients.",
+    ],
+  },
+  {
+    type: "corporate",
     title: "Bilingual Operations Specialist",
     company: "Hired Experts / DS Solutions - Cordoba Legal Group",
     date: "Jun 2025 – Feb 2026",
@@ -54,7 +64,6 @@ const allRoles: Role[] = [
     title: "Bilingual Banking Support Specialist",
     company: "Sutherland - Capital One",
     date: "Nov 2024 – Mar 2025",
-    clearance: true,
     tags: [{ label: "Financial Data", color: "gold" }, { label: "PII Compliance", color: "red" }, { label: "AI Tools", color: "blue" }],
     bullets: [
       "Delivered bilingual (EN/ES) Tier 1-2 support for Capital One's U.S. customer base, handling sensitive financial data in compliance with banking security protocols.",
@@ -68,7 +77,6 @@ const allRoles: Role[] = [
     title: "Customer Success Associate",
     company: "Concentrix/Webhelp - CIGNA Healthcare",
     date: "Aug 2023 – Nov 2024",
-    clearance: true,
     tags: [{ label: "HIPAA/PHI Governance", color: "red" }, { label: "Medical Billing", color: "gold" }, { label: "Healthcare", color: "blue" }],
     bullets: [
       "Administered multichannel healthcare support operations for CIGNA, ensuring compliance with QA metrics and strategic guidelines.",
@@ -91,11 +99,11 @@ const allRoles: Role[] = [
     type: "corporate",
     title: "Call Center Representative",
     company: "Nexa BPO / Porvenir",
-    date: "Feb 2023 – May 2023",
+    date: "Feb 2023",
     tags: [{ label: "Pension Funds", color: "gold" }, { label: "Regulatory", color: "red" }],
     bullets: [
       "Managed pension fund support operations including eligibility verification and regulatory compliance inquiries.",
-      "Delivered structured customer guidance on retirement planning and fund allocation within compliance frameworks.",
+      "Provided guidance on severance and pension processes during a high-demand seasonal campaign.",
     ],
   },
   {
@@ -127,9 +135,9 @@ const allRoles: Role[] = [
     date: "2018 – 2019",
     tags: [{ label: "Archival Science", color: "blue" }, { label: "ISAD(G)", color: "gold" }, { label: "Central Bank", color: "red" }],
     bullets: [
-      "Orchestrated the transition of 20,000+ items for the Central Bank Planoteca using ISAD(G) archival standards.",
-      "Led a team of records technicians in systematic cataloging, preservation, and digital indexing of historical financial documents.",
-      "Implemented quality control protocols ensuring 99.5% accuracy in metadata tagging and document classification.",
+      "Processed approximately 25,000 historical architectural plans of Banco de la República buildings, plus historical accounting ledgers of the Bank and its Fondo de Estabilización, applying ISAD(G) archival standards.",
+      "Worked with documentation related to assets held from Italian, German, and Japanese nationals during World War II.",
+      "Maintained archival description and digitization workflows for historical financial records.",
     ],
   },
   {
@@ -351,11 +359,6 @@ const ForgeSection = () => {
                           <div className="flex flex-wrap gap-1 mb-2">
                             {cr.tags.map((tag, j) => <TagBadge key={j} label={tag.label} color={tag.color} />)}
                           </div>
-                        )}
-                        {cr.clearance && (
-                          <p className="font-mono text-[9px] tracking-wider uppercase mb-2">
-                            <span className="text-aged-gold">Security Clearance Required</span>
-                          </p>
                         )}
                         <ul className="space-y-2">
                           {cr.bullets.map((b, j) => (
