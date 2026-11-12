@@ -2,10 +2,10 @@
 
 ## Pending on Diego
 - [x] Receive commercial Tally form: https://tally.so/r/RWWL8j
-- [ ] Make future-contact consent optional in Tally; it currently blocks submission unless checked.
-- [ ] Make supporting links and file uploads optional in Tally; both are currently required.
+- [x] Verify future-contact consent is optional in the published commercial Tally form.
+- [x] Verify supporting links and file uploads are optional in the published commercial Tally form.
 
-## Ready to build once commercial form requirements are corrected
+## Ready to build — commercial form requirements verified
 - [ ] Build all 8 pages (routes) per master prompt
 - [ ] Replace Download Resume file with Diego_Armando_Mendez_CV_2026_1.pdf
 - [ ] Normalize content claims to match approved CV (source of truth: uploaded PDF)
