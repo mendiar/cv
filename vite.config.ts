@@ -1,4 +1,4 @@
-import { defineConfig } from "vite";
+import { defineConfig, type ViteDevServer } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import fs from "node:fs";
@@ -16,7 +16,7 @@ export default defineConfig(({ mode }) => ({
   plugins: [
     {
       name: "static-portfolio-preview",
-      configureServer(server) {
+      configureServer(server: ViteDevServer) {
         server.middlewares.use((req, res, next) => {
           const url = (req.url || "/").split("?")[0];
           const local = url === "/cv" ? "/" : url.startsWith("/cv/") ? url.slice(3) : url;

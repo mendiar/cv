@@ -6,10 +6,11 @@
 - [x] Verify supporting links and file uploads are optional in the published commercial Tally form.
 
 ## Ready to build — commercial form requirements verified
-- [ ] Build all 8 pages (routes) per master prompt
-- [ ] Replace Download Resume file with Diego_Armando_Mendez_CV_2026_1.pdf
-- [ ] Normalize content claims to match approved CV (source of truth: uploaded PDF)
-- [ ] Keep anonymous form as general contact channel
+- [x] Build all 8 pages (routes) per master prompt
+- [x] Replace Download Resume file with Diego_Armando_Mendez_CV_2026_1.pdf
+- [x] Normalize content claims to match approved CV (source of truth: uploaded PDF)
+- [x] Preserve the general Tally channel, separate from commercial inquiries
+- [ ] Diego: make the general Tally Eqq0WA email field optional and publish; it currently requires email despite its optional label.
 - [ ] Final build + desktop/mobile browser verification
 
 ## Approved CV facts (from Diego_Armando_Mendez_CV_2026_1.pdf)
