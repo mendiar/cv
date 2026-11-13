@@ -12,7 +12,8 @@
 - [x] Preserve the general Tally channel, separate from commercial inquiries
 - [ ] Diego: make the general Tally Eqq0WA email field optional and publish; it currently requires email despite its optional label.
 - [x] Final automatic build and desktop/mobile browser verification: eight routes, languages, history, keyboard, PDF, and empty-form validation.
-- [ ] Diego: deploy the finished static pages to GitHub Pages; public production URLs and successful real submissions remain unverified.
+- [ ] Publish the finished static pages to mendiar/cv on GitHub Pages; waiting for GitHub authorization. Verify public pages after deployment.
+- [x] Verify profile portrait on desktop and mobile: image loads at 605×615, with correct circular framing.
 
 ## Approved CV facts (from Diego_Armando_Mendez_CV_2026_1.pdf)
 - Omega Healthcare PAC: Apr 2026–Present, ~80 calls/day, Epic + Salesforce, After Hours Line
