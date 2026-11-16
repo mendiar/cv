@@ -41,8 +41,35 @@ class PortfolioRules(unittest.TestCase):
         self.assertEqual(hashlib.sha256(approved.read_bytes()).hexdigest(), hashlib.sha256((ROOT / 'public/Diego_Armando_Mendez_Resume.pdf').read_bytes()).hexdigest())
 
     def test_all_routes_delivered(self):
-        for route in ['career', 'services', 'research', 'projects', 'contact', 'services/contact', 'support']:
+        for route in ['career', 'services', 'research', 'projects', 'contact', 'private-access', 'services/contact', 'support']:
             self.assertTrue((ROOT / 'public' / route / 'index.html').is_file())
+
+    def test_private_route_is_noindex_and_outside_primary_navigation(self):
+        private = BeautifulSoup((ROOT / 'public/private-access/index.html').read_text(), 'html.parser')
+        self.assertIn('noindex', private.find('meta', attrs={'name': 'robots'})['content'])
+        primary_hrefs = [a.get('href', '') for a in private.nav.select('.nav-links a')]
+        self.assertNotIn('/cv/private-access', primary_hrefs)
+        self.assertIsNotNone(private.footer.find('a', href='/cv/private-access'))
+        contact = BeautifulSoup((ROOT / 'public/contact/index.html').read_text(), 'html.parser')
+        self.assertIsNotNone(contact.find('a', href='/cv/private-access'))
+
+    def test_private_provider_links_are_not_in_public_files(self):
+        files = [ROOT / 'index.html'] + [p for p in (ROOT / 'public').rglob('*') if p.suffix in {'.html', '.js', '.css', '.json', '.txt'}]
+        for file in files:
+            content = file.read_text()
+            self.assertNotIn('1drv.ms/f/', content, str(file))
+            self.assertNotIn('drive.google.com/drive/folders/', content, str(file))
+
+    def test_private_access_has_all_four_document_categories(self):
+        private = BeautifulSoup((ROOT / 'public/private-access/index.html').read_text(), 'html.parser')
+        containers = private.select('[data-documents]')
+        self.assertEqual({node['data-documents'] for node in containers}, {'professional', 'academic', 'work_samples', 'restricted_projects'})
+
+    def test_private_authentication_script_is_served_locally(self):
+        private = BeautifulSoup((ROOT / 'public/private-access/index.html').read_text(), 'html.parser')
+        sources = [script.get('src', '') for script in private.find_all('script')]
+        self.assertIn('/cv/private-access/vendor/supabase-client.js', sources)
+        self.assertTrue(all('supabase' not in source or source.startswith('/cv/') for source in sources))
 
 if __name__ == '__main__':
     unittest.main()

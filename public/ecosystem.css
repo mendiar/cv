@@ -103,12 +103,40 @@ dd{margin:4px 0 12px;font-size:.95rem;color:var(--site-text)}
 .wiki-cat,.wiki-axiom{font-size:.8rem;color:var(--site-label)!important}
 .editorial-meta{border-top:1px solid var(--site-border);margin-top:20px}
 footer{padding:24px;color:var(--site-label);font-size:.85rem}
+.footer-links{display:flex;justify-content:center;gap:8px 24px;flex-wrap:wrap}
 .footer-link{font-size:.8rem;display:inline-flex;align-items:center;min-height:44px}
+.private-footer-link{font-size:.72rem;color:var(--site-muted)}
+.confidentiality-notice{margin:24px 0;padding:20px;border:1px solid var(--site-notice);border-left-width:3px;background:var(--site-surface)}
+.confidentiality-notice h2{font-size:1.2rem;color:var(--site-highlight);margin-bottom:8px}
+.confidentiality-notice p{font-size:.95rem;line-height:1.7;color:var(--site-text)}
+.private-login-panel{max-width:560px;margin:24px 0;padding:24px;border:1px solid var(--site-border);background:var(--site-surface)}
+.private-login-panel h2{font-size:1.6rem;color:var(--site-heading);margin-bottom:20px}
+.private-form{display:grid;gap:12px}
+.private-form label{font:500 .85rem/1.5 'Fira Code',monospace;color:var(--site-label);margin-top:8px}
+.private-form input{width:100%;min-height:48px;padding:12px 14px;border:1px solid var(--site-border);border-radius:2px;background:var(--obsidian);color:var(--site-text);font:400 1rem/1.5 'Fira Sans',sans-serif}
+.private-form button{justify-self:start;margin-top:8px}
+.private-form button:disabled,.private-open:disabled{opacity:.55;cursor:wait}
+.private-help,.private-limitation{font-size:.85rem;line-height:1.65;color:var(--site-label)}
+.private-help{margin-top:16px}
+.private-status{min-height:24px;margin:12px 0;font-size:.9rem;color:var(--site-highlight)}
+.private-error{color:var(--site-highlight)!important}
+.private-account{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:16px 0;border-bottom:1px solid var(--site-border)}
+.private-account p{overflow-wrap:anywhere}
+.private-limitation{margin:20px 0;padding:16px 0;border-top:1px solid var(--site-notice);border-bottom:1px solid var(--site-notice)}
+.private-categories{display:grid;gap:16px;margin-top:24px}
+.private-category{padding:20px;border:1px solid var(--site-border);background:var(--site-surface)}
+.private-category h2{font-size:1.35rem;color:var(--site-heading);margin-bottom:16px}
+.private-document{padding:16px 0;border-top:1px solid var(--site-border)}
+.private-document h3{font-size:1.15rem;color:var(--site-heading);margin:4px 0 8px}
+.private-document p{max-width:760px;font-size:.95rem;line-height:1.65}
+.private-provider{font:500 .72rem/1.5 'Fira Code',monospace;color:var(--site-muted)!important;text-transform:uppercase}
+.private-open{margin-top:12px}
+.private-empty{font-size:.9rem;color:var(--site-muted);padding:12px 0;border-top:1px solid var(--site-border)}
 .nav-links a{font-size:.76rem!important;letter-spacing:0!important}
 .btn-outline,.btn-gold{font-size:.85rem!important;letter-spacing:0!important}
 .hero-eyebrow{color:var(--site-label)!important;text-shadow:none!important}
 .hstat-l{color:var(--site-label)!important;text-shadow:none!important}
 @media(max-width:1120px){.nav-links{display:none}.hamburger{display:flex}}
 @media(max-width:900px){.hero-inner{grid-template-columns:1fr;gap:24px}.hero-text{padding:24px 0 0;border-left:0}.photo-outer{min-height:160px}.photo-circle{width:130px;height:130px}.photo-ring{width:146px;height:146px}.photo-ring2{width:160px;height:160px}.photo-status{bottom:-10px;left:auto;right:auto}.hero-text::before{top:0}}
-@media(max-width:600px){nav{padding:0 16px;gap:8px}.nav-brand{font-size:.8rem}.nav-tools{gap:6px}.lang-toggle{padding:6px}.page-body{padding:92px 16px 32px}.page-heading .sec-title{font-size:2.1rem!important}.page-heading{margin-top:20px}.band-title{font-size:1.7rem}.content-band{padding:24px 0}.ecosystem-grid,.project-grid,.service-list,.wiki-grid,.editorial-grid{grid-template-columns:1fr!important}.hero-name{font-size:2.8rem!important}#hero{padding:100px 16px 32px!important}.hero-eyebrow{font-size:.76rem}.hero-bio{font-size:1rem}.hero-stats{gap:16px}.hstat{max-width:90px}.hstat-l{font-size:.67rem}.hero-ctas{display:grid;grid-template-columns:1fr}.hero-ctas a{width:100%}.timeline{padding-left:16px}.tl-item:nth-child(n){padding:16px}.tl-node{left:-16px}.tl-title{font-size:1.2rem!important}.contact-nexus{grid-template-columns:1fr!important}.form-section{padding:20px 0}.project-card{padding:18px}.sec-title{overflow-wrap:anywhere}.back-link{font-size:.8rem}.architect-grid .trait-grid{grid-template-columns:1fr}.tutoring-band{padding-left:16px}}
+@media(max-width:600px){nav{padding:0 16px;gap:8px}.nav-brand{font-size:.8rem}.nav-tools{gap:6px}.lang-toggle{padding:6px}.page-body{padding:92px 16px 32px}.private-login-panel,.private-category,.confidentiality-notice{padding:16px}.private-form button,.private-open{width:100%}.private-account{align-items:flex-start}.private-account .btn-outline{width:100%}.page-heading .sec-title{font-size:2.1rem!important}.page-heading{margin-top:20px}.band-title{font-size:1.7rem}.content-band{padding:24px 0}.ecosystem-grid,.project-grid,.service-list,.wiki-grid,.editorial-grid{grid-template-columns:1fr!important}.hero-name{font-size:2.8rem!important}#hero{padding:100px 16px 32px!important}.hero-eyebrow{font-size:.76rem}.hero-bio{font-size:1rem}.hero-stats{gap:16px}.hstat{max-width:90px}.hstat-l{font-size:.67rem}.hero-ctas{display:grid;grid-template-columns:1fr}.hero-ctas a{width:100%}.timeline{padding-left:16px}.tl-item:nth-child(n){padding:16px}.tl-node{left:-16px}.tl-title{font-size:1.2rem!important}.contact-nexus{grid-template-columns:1fr!important}.form-section{padding:20px 0}.project-card{padding:18px}.sec-title{overflow-wrap:anywhere}.back-link{font-size:.8rem}.architect-grid .trait-grid{grid-template-columns:1fr}.tutoring-band{padding-left:16px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rune-bg{display:none}.reveal{opacity:1;transform:none}}
