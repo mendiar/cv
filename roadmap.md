@@ -1,5 +1,12 @@
 # Roadmap — Archeofuturist Portfolio rebuild (8 pages)
 
+## Private Document Access
+- [x] Enable server-side email/password authentication and disable public registration.
+- [x] Store provider folder links only in protected Lovable Cloud tables.
+- [ ] Add discreet Contact/footer entry and bilingual noindex private route.
+- [ ] Verify authorized, unauthorized, expired-ticket, and revoked-access behavior.
+- [ ] Report provider-sharing limitations before any GitHub Pages deployment.
+
 ## Pending on Diego
 - [x] Receive commercial Tally form: https://tally.so/r/RWWL8j
 - [x] Verify future-contact consent is optional in the published commercial Tally form.
