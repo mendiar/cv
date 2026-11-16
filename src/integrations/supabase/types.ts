@@ -14,7 +14,122 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      private_access_grants: {
+        Row: {
+          active: boolean
+          created_at: string
+          email: string
+          expires_at: string | null
+          id: string
+          revoked_at: string | null
+          updated_at: string
+          user_id: string | null
+        }
+        Insert: {
+          active?: boolean
+          created_at?: string
+          email: string
+          expires_at?: string | null
+          id?: string
+          revoked_at?: string | null
+          updated_at?: string
+          user_id?: string | null
+        }
+        Update: {
+          active?: boolean
+          created_at?: string
+          email?: string
+          expires_at?: string | null
+          id?: string
+          revoked_at?: string | null
+          updated_at?: string
+          user_id?: string | null
+        }
+        Relationships: []
+      }
+      private_documents: {
+        Row: {
+          active: boolean
+          category: string
+          created_at: string
+          description_en: string
+          description_es: string
+          external_url: string
+          id: string
+          provider: string
+          sort_order: number
+          title_en: string
+          title_es: string
+          updated_at: string
+        }
+        Insert: {
+          active?: boolean
+          category: string
+          created_at?: string
+          description_en?: string
+          description_es?: string
+          external_url: string
+          id?: string
+          provider: string
+          sort_order?: number
+          title_en: string
+          title_es: string
+          updated_at?: string
+        }
+        Update: {
+          active?: boolean
+          category?: string
+          created_at?: string
+          description_en?: string
+          description_es?: string
+          external_url?: string
+          id?: string
+          provider?: string
+          sort_order?: number
+          title_en?: string
+          title_es?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      private_download_tickets: {
+        Row: {
+          created_at: string
+          document_id: string
+          expires_at: string
+          id: string
+          token_hash: string
+          used_at: string | null
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          document_id: string
+          expires_at: string
+          id?: string
+          token_hash: string
+          used_at?: string | null
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          document_id?: string
+          expires_at?: string
+          id?: string
+          token_hash?: string
+          used_at?: string | null
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "private_download_tickets_document_id_fkey"
+            columns: ["document_id"]
+            isOneToOne: false
+            referencedRelation: "private_documents"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
     }
     Views: {
       [_ in never]: never
