@@ -8,6 +8,20 @@ shell = json.loads((ROOT/'content/legacy-shell.json').read_text())
 career = json.loads((ROOT/'content/career.json').read_text())
 BASE = '/cv/'
 ORIGIN = 'https://mendiar.github.io'
+
+def public_backend_config():
+    """Read only the publishable browser connection; never read or emit private keys."""
+    values = {}
+    for line in (ROOT/'.env').read_text().splitlines():
+        if line.startswith(('VITE_SUPABASE_URL=', 'VITE_SUPABASE_PUBLISHABLE_KEY=')):
+            key, value = line.split('=', 1)
+            values[key] = value.strip()
+    missing = {'VITE_SUPABASE_URL', 'VITE_SUPABASE_PUBLISHABLE_KEY'} - values.keys()
+    if missing:
+        raise RuntimeError('The public Lovable Cloud browser connection is not configured.')
+    return values
+
+BACKEND = public_backend_config()
 ENGLISH = 'English: C1 Advanced — EF SET 64/100; professional bilingual communication.'
 PROFILE = 'Bilingual operations and healthcare-support professional with 10+ years of experience across patient access, customer experience, BPO operations, records management, financial services, public administration, and education. Experienced in regulated-information handling, case and service workflows, customer communication, documentation, escalation support, and operational follow-up in English- and Spanish-speaking environments.'
 PROFILE_ES = 'Profesional bilingüe de operaciones y soporte en salud con más de 10 años de experiencia en acceso de pacientes, experiencia del cliente, operaciones BPO, gestión documental, servicios financieros, administración pública y educación. Experiencia en manejo de información regulada, flujos de casos y servicios, comunicación con clientes, documentación, apoyo al escalamiento y seguimiento operativo en entornos de habla inglesa y española.'
