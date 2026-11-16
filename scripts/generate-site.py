@@ -1,5 +1,6 @@
 """Generate static, bilingual GitHub Pages documents from the preserved shell."""
 import json
+import subprocess
 from html import escape as e
 from pathlib import Path
 
@@ -142,6 +143,7 @@ pages['support']=('Support — Coming Soon / Diakos Logic Intelligence & Researc
 
 footer='<footer><p>Diego Armando Méndez · Diakos Logic &amp; DevMind · Bogotá, Colombia</p><div class="footer-links">'+link('career','Professional Career','Trayectoria profesional','footer-link')+link('private-access','Private Document Access','Acceso privado a documentos','footer-link private-footer-link')+'</div></footer>'
 styles=shell['styles']
+subprocess.run(['node', str(ROOT/'scripts/build-private-client.mjs')], cwd=ROOT, check=True)
 for path,(page_title,description,body) in pages.items():
     canonical=ORIGIN+BASE+path
     private_head=''
