@@ -27,7 +27,7 @@
 - Both Tally embeds load. Empty submits show concrete required-field errors and do not submit fabricated messages.
 - Six concrete rule tests pass. Automatic build reports OK.
 
-## Private Document Access — verified, not deployed to GitHub Pages
+## Private Document Access — verified and deployed to GitHub Pages
 - New bilingual `/cv/private-access` route, linked discreetly from Contact and every footer; it is absent from primary navigation and carries `noindex, nofollow, noarchive, nosnippet` plus no-referrer metadata.
 - Authentication: Lovable Cloud email/password accounts created individually by Diego. Public registration is disabled. A separate protected grant authorizes the account and can be deactivated or revoked.
 - Storage: documents remain in OneDrive and Google Drive. Provider folder URLs exist only in protected Lovable Cloud records, never in static HTML, browser data, scripts, or the public repository. No private document is stored on GitHub Pages.
