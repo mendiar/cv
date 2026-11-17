@@ -47,6 +47,7 @@ class PortfolioRules(unittest.TestCase):
     def test_private_route_is_noindex_and_outside_primary_navigation(self):
         private = BeautifulSoup((ROOT / 'public/private-access/index.html').read_text(), 'html.parser')
         self.assertIn('noindex', private.find('meta', attrs={'name': 'robots'})['content'])
+        self.assertTrue(private.find('meta', attrs={'name': 'private-api-url'})['content'].startswith('https://'))
         primary_hrefs = [a.get('href', '') for a in private.nav.select('.nav-links a')]
         self.assertNotIn('/cv/private-access', primary_hrefs)
         self.assertIsNotNone(private.footer.find('a', href='/cv/private-access'))
