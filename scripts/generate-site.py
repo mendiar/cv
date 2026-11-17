@@ -16,7 +16,7 @@ def public_backend_config():
     for line in (ROOT/'.env').read_text().splitlines():
         if line.startswith(('VITE_SUPABASE_URL=', 'VITE_SUPABASE_PUBLISHABLE_KEY=')):
             key, value = line.split('=', 1)
-            values[key] = value.strip()
+            values[key] = value.strip().strip('"').strip("'")
     missing = {'VITE_SUPABASE_URL', 'VITE_SUPABASE_PUBLISHABLE_KEY'} - values.keys()
     if missing:
         raise RuntimeError('The public Lovable Cloud browser connection is not configured.')
